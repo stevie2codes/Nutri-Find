@@ -1,0 +1,29 @@
+body{
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+}
+
+h1{
+    margin-top: 150px;
+    font-size: 4rem;
+    text-align: center;
+   font-family:'Bebas Neue', cursive; 
+   letter-spacing: 5px;
+}
+
+.main,
+ .create-form,
+ .add{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.findText{
+    text-align: center;
+    font-family:'Bebas Neue', cursive; 
+    letter-spacing: 5px;
+
+}
