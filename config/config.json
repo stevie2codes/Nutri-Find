@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "christianlance",
+    "username": "root",
     "password": "MyNewPass",
     "database": "nutri_find_db",
     "host": "127.0.0.1",
