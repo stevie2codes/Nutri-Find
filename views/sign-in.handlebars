@@ -1,24 +1,24 @@
  <h1>Sign In</h1>
-{{#content "body"}}
+{{!-- {{#content "body"}} --}}
 <p>
-{{#each name}} 
-{{this.id}}. {{this.name}}
-<button data-planid="{{this.id}}" class="submit">Submit</button>
+{{!-- {{#each name}} 
+{{this.id}}. {{this.name}} --}}
+<button data-planid="" class="submit">Submit</button>
 </p>
-<label id="{{this.id}}" class="button-size"> 
-    <p>{{firstname}} {{lastname}}</p>
-    <textarea type="text" name="name"> {{name}}</textarea>
+<label id="" class="button-size"> 
+    <p></p>
+    <textarea type="text" name="name"></textarea>
     <button type="submit">SignIN</button>
 </label>
-{{/content}}  
+ 
 <h1> NutriFind Sign IN </h1>
 <ul>
-  {{#each user}}
+  
     <li>
-      <p><span class="label"><h2>Welcome</h2></span> {{this.user}}</p>
-      <a href="/{{this.id}}">SignIn different User</a>
+      <p><span class="label"><h2>Welcome</h2></span> </p>
+      <a href="/">SignIn different User</a>
     </li>
-  {{/each}}
+  
 </ul>
 <h1> Sign In Here</h1>
 <form class="form">
@@ -29,10 +29,10 @@
 <button type="submit">SignIN</button>
 </form>
 update sign in to new user 
-<form data-id="{{this.id}}" class="signin-form">
+<form data-id="" class="signin-form">
 <div class="form-group">
     <label for="name">name:</label>
-    <input type="text" id="name1" name="fullname" value="{{this.name}}">
+    <input type="text" id="name1" name="fullname" value="">
   </div>
     <button type="submit">Sign IN</button>
 </form> 
