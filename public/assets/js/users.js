@@ -22,6 +22,12 @@ $(document).ready(function () {
     function insertUser(userData) {
         $.post("/api/users", userData)
             .then(getUsers)
+            $.ajax({
+                method: POST,
+                url:"/api/users",
+                dataType:'json',
+                ContentType: 'application/json'
+            })
     }
 
     function createUserRow(userData) {
@@ -42,14 +48,27 @@ $(document).ready(function () {
     }
 
     function getUsers() {
-        $.get("/api/users", function (data) {
+        // $.get("/api/users", function (data) {
+        //     let rowAdd = [];
+        //     for (let i = 0; i < data.length; i++) {
+        //         rowAdd.push(createUserRow(data[i]));
+        //     }
+        //     renderUserList(rowAdd);
+        //     userName.val("");
+        // });
+        $.ajax({
+            method: GET,
+            url:"/api/users",
+            dataType: 'json',
+            ContentType: 'application/json'
+        }).then(data)
+        {
             let rowAdd = [];
-            for (let i = 0; i < data.length; i++) {
-                rowAdd.push(createUserRow(data[i]));
-            }
-            renderUserList(rowAdd);
-            userName.val("");
-        });
+            for (let i = 0; i < data.length; i++);
+            rowAdd.push(createUserRow(data[i]));
+        }
+        renderUserList(rowAdd);
+        userName.val("");
     }
 
     function renderUserList(rows) {
