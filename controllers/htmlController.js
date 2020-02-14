@@ -25,4 +25,8 @@ const db = require("../models");
     res.render("sign-in");
   });
 
+  html_router.get("/create", function(req, res) {
+    res.render("create-recipe")
+  });
+
 module.exports = html_router;
