@@ -1,6 +1,7 @@
 let db = require("../models");
 let express = require("express");
 let api_router = express.Router();
+const path = require("path");
 
 // module.exports = function (app) {
 // Find all Users and return them to the user with res.json
@@ -18,7 +19,7 @@ api_router.get("/api/users/:id", function (req, res) {
     where: {
       id: req.params.id
     },
-    inclue: [db.nutri_find_db]
+    include: [db.User]
   }).then(function (dbUser) {
     res.json(dbUser);
   });

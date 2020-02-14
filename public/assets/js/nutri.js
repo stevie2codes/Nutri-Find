@@ -13,12 +13,10 @@ $(document).ready(function () {
         $.ajax({
             url: url,
             type: "GET",
-
         }).then(data => {
             let items = data.hits;
             console.log(items);
             items.forEach(element => {
-
                 $("#item-" + itemDisplay).addClass("label-name").children(".recipe-display").html(`${element.recipe.label}`);
                 $("#item-" + itemDisplay).children("#recipe-icon").attr("src", element.recipe.image);
                 $("#item-" + itemDisplay).children("#recipeLink").attr("href", element.recipe.url);
@@ -29,4 +27,3 @@ $(document).ready(function () {
         return event;
     }
 });
-
