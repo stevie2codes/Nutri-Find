@@ -20,9 +20,14 @@ $(document).ready(function () {
     }
 
     function insertUser(userData) {
-        $.post("/api/users", userData)
-            .then(getUsers)
-    }
+console.log("yoo");
+            $.ajax({
+                method: 'POST',
+                url:"/api/users",
+                dataType:'json',
+                contentType: 'application/json'
+            }).then(getUsers)
+        };
 
     function createUserRow(userData) {
         console.log(userData);
@@ -42,15 +47,20 @@ $(document).ready(function () {
     }
 
     function getUsers() {
-        $.get("/api/users", function (data) {
+        $.ajax({
+            method: 'GET',
+            url:"/api/users",
+            dataType: 'json',
+            contentType: 'application/json'
+                }).then(data =>{
             let rowAdd = [];
             for (let i = 0; i < data.length; i++) {
                 rowAdd.push(createUserRow(data[i]));
             }
             renderUserList(rowAdd);
             userName.val("");
-        });
-    }
+                      });
+                };
 
     function renderUserList(rows) {
         userList.children().not(":last").remove();
