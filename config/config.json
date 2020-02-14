@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "MyNewPass",
+    "username": "lswift",
+    "password": "Password1",
     "database": "nutri_find_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
