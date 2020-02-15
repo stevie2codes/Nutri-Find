@@ -7,26 +7,26 @@ const db = require("../models");
 // =============================================================
 
 
-  // Each of the below routes just handles the HTML page that the user gets sent to.
+// Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads view.html
-  html_router.get("/", function(req, res) {
-   
-    res.render("index");
-  });
+// index route loads view.html
+html_router.get("/", function (req, res) {
 
-  // recipes route loads recipes handlebars
-  html_router.get("/recipes", function(req, res) {
-    //res.sendFile(path.join(__dirname, ""));
-  });
+  res.render("index");
+});
 
-  // users route loads
-  html_router.get("/users", function(req, res) {  
-    res.render("sign-in");
-  });
+// recipes route loads recipes handlebars
+html_router.get("/recipes", function (req, res) {
+  //res.sendFile(path.join(__dirname, ""));
+});
 
-  html_router.get("/create", function(req, res) {
-    res.render("create-recipe")
-  });
+// users route loads
+html_router.get("/users", function (req, res) {
+  res.render("sign-in");
+});
+
+html_router.get("/create", function (req, res) {
+  res.render("create")
+});
 
 module.exports = html_router;
