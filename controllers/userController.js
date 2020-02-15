@@ -6,9 +6,7 @@ const path = require("path");
 // module.exports = function (app) {
 // Find all Users and return them to the user with res.json
 api_router.get("/api/users", function (req, res) {
-  db.User.findAll({
-    include: [db.Post]
-  }).then(function (dbUser) {
+  db.User.findAll().then(function (dbUser) {
     res.json(dbUser);
   });
 });

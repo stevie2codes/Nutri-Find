@@ -14,20 +14,35 @@ $(document).ready(function () {
         if (!userName.val().trim()) {
             return;
         }
-        insertUser({
-            user_name: userName.val().trim()
-        });
+
+        let userData = {
+            'user_name': userName.val().trim()
+        };
+        insertUser(userData);
     }
 
     function insertUser(userData) {
-console.log("yoo");
-            $.ajax({
-                method: 'POST',
-                url:"/api/users",
-                dataType:'json',
-                contentType: 'application/json'
-            }).then(getUsers)
-        };
+        console.log(userData);
+        $.post("/api/users", {
+            data: userData,
+            dataType: "json"
+        }, function () {
+            getUsers();
+        })
+                    // $.ajax({
+                    //     method: 'POST',
+                    //     url: "/api/users",
+                    //     contentType: "application/json",
+                    //     dataType: "json",
+                    //     data: userData
+                    // }).then(
+                    //     (data) => {
+                    //         getUsers();
+                    //         console.log("YOO");
+                    //     }
+                          
+                    // );
+    }
 
     function createUserRow(userData) {
         console.log(userData);
@@ -46,6 +61,7 @@ console.log("yoo");
         return newTr;
     }
 
+    
     function getUsers() {
         $.ajax({
             method: 'GET',
@@ -57,10 +73,12 @@ console.log("yoo");
             for (let i = 0; i < data.length; i++) {
                 rowAdd.push(createUserRow(data[i]));
             }
+            console.log(data);
             renderUserList(rowAdd);
             userName.val("");
                       });
                 };
+                
 
     function renderUserList(rows) {
         userList.children().not(":last").remove();
