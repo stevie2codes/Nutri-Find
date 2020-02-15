@@ -6,13 +6,13 @@ module.exports = function(sequelize, DataTypes) {
     // Giving the RECIPES model a name of type STRING
     name: DataTypes.STRING
   });
-  Recipes.associate = function(models) {
-    // Associating RECIPES with Posts
-    // When a RECIPE is deleted, also delete any associated Posts
-    Recipes.hasMany(models.Post, {
-      onDelete: "cascade"
-    });
-  };
+  // Recipes.associate = function(models) {
+  //   // Associating RECIPES with Posts
+  //   // When a RECIPE is deleted, also delete any associated Posts
+  //   Recipes.hasMany(models.Post, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   return Recipes;
 };
