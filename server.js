@@ -24,7 +24,7 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 
 app.use(html_routes);
-app.use(nutri_routes);
+// app.use(nutri_routes);
 app.use(api_routes);
 
 db.sequelize.sync({ force: true }).then(function () {
