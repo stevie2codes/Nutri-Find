@@ -72,6 +72,7 @@ $(document).ready(function () {
             let rowAdd = [];
             for (let i = 0; i < data.length; i++) {
                 rowAdd.push(createUserRow(data[i]));
+                
             }
             console.log(data);
             renderUserList(rowAdd);
