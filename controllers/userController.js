@@ -6,9 +6,7 @@ const path = require("path");
 // module.exports = function (app) {
 // Find all Users and return them to the user with res.json
 api_router.get("/api/users", function (req, res) {
-  db.User.findAll({
-    include: [db.Post]
-  }).then(function (dbUser) {
+  db.User.findAll().then(function (dbUser) {
     res.json(dbUser);
   });
 });
@@ -27,7 +25,6 @@ api_router.get("/api/users/:id", function (req, res) {
 
 api_router.post("/api/users", function (req, res) {
   // Create an User with the data available to us in req.body
-  console.log("hello")
   console.log(req.body);
   db.User.create(req.body).then(function (dbUser) {
     res.json(dbUser);
