@@ -27,6 +27,7 @@ api_router.get("/api/users/:id", function (req, res) {
 
 api_router.post("/api/users", function (req, res) {
   // Create an User with the data available to us in req.body
+  console.log("hello")
   console.log(req.body);
   db.User.create(req.body).then(function (dbUser) {
     res.json(dbUser);

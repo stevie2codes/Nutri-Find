@@ -4,7 +4,7 @@ $(document).ready(function () {
     const userList = $("tbody");
     const userContainer = $(".user-container");
 
-    $(document).on("submit", "#user-form", handleUserFromSubmit);
+    $(document).on("click", ".user-btn", handleUserFromSubmit);
     $(document).on("click", ".delete-user", handleDelete);
 
     getUsers();
@@ -15,19 +15,27 @@ $(document).ready(function () {
             return;
         }
         insertUser({
-            user_name: userName.val().trim()
+            username: userName.val().trim()
         });
     }
 
     function insertUser(userData) {
-console.log("yoo");
-            $.ajax({
-                method: 'POST',
-                url:"/api/users",
-                dataType:'json',
-                contentType: 'application/json'
-            }).then(getUsers)
-        };
+        console.log(userData);
+        
+                    $.ajax({
+                        method: 'POST',
+                        url: "/api/users",
+                        contentType: "application/json",
+                        dataType: "json",
+                        //data: userData
+                    }).then(
+                        (data) => {
+                            getUsers();
+                            console.log("YOO");
+                        }
+                          
+                    );
+    }
 
     function createUserRow(userData) {
         console.log(userData);
@@ -46,6 +54,7 @@ console.log("yoo");
         return newTr;
     }
 
+    
     function getUsers() {
         $.ajax({
             method: 'GET',
@@ -57,10 +66,12 @@ console.log("yoo");
             for (let i = 0; i < data.length; i++) {
                 rowAdd.push(createUserRow(data[i]));
             }
+            console.log(data);
             renderUserList(rowAdd);
             userName.val("");
                       });
                 };
+                
 
     function renderUserList(rows) {
         userList.children().not(":last").remove();
