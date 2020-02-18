@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
 
     $(".user-btn").on("click", event => {

@@ -7,7 +7,7 @@ const db = require("../models");
 // =============================================================
 
 
-// Each of the below routes just handles the HTML page that the user gets sent to.
+// Each of the below routes just handles the Handlebars page that the user gets sent to.
 
 // index route loads view.html
 html_router.get("/", function (req, res) {
@@ -26,6 +26,7 @@ html_router.get("/users", function (req, res) {
 
 html_router.get("/create", function (req, res) {
   res.render("create")
+
 });
 
 module.exports = html_router;
