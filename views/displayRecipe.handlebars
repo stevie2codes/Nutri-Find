@@ -1,0 +1,14 @@
+<h1>Created Recipes</h1>
+{{#each recipe}}
+<ul class="recipeContainer flex justify-center animated fadeIn">
+
+    <li class="recipeLi">
+        <p class="font-extrabold"> <span class="recipeText">Recipe Name:</span> {{this.dataValues.recipeName}}</p> <br>
+
+        <p class="semi-bold"> <span class="recipeText">ingredients: </span> {{this.dataValues.ingredients}}</p> <br>
+
+        <p class="semi-bold"><span class="recipeText">Directions: </span> {{this.dataValues.directions}}</p>
+    </li>
+
+</ul>
+{{/each}}
