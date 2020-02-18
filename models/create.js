@@ -26,5 +26,17 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: "Create Recipe"
     }
   });
+  //Post belongs to User and a newRecipe 
+  ///////IVE CHANGED ALLOW NULL TO TO TRUE UNTIL WE GET THIS HOOKED UP
+  ////IF IT IS FALSE THEN THE FORIEGN KEY CONSTRAINT WONT LET US POST A NEW RECIPE
+  Post.associate = function (models) {
+
+    Post.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: true
+      }
+    });
+  }
+
   return Post;
 };
