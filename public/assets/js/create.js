@@ -7,8 +7,6 @@ $(document).ready(function () {
     let selectUser = $("#userSelect");
 
 
-
-
     submitRecipe.on("click", event => {
         event.preventDefault();
         let newRecipe = {
@@ -25,5 +23,7 @@ $(document).ready(function () {
             window.location.href = "/api/newRecipe";
         });
     });
+
+
 
 });

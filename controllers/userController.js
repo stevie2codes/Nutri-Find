@@ -3,7 +3,7 @@ let express = require("express");
 let api_router = express.Router();
 const path = require("path");
 
-// module.exports = function (app) {
+
 // Find all Users and return them to the user with res.json
 
 api_router.get("/api/newUser", function (req, res) {
@@ -42,20 +42,6 @@ api_router.delete("/api/newUser/:id", function (req, res) {
 });
 
 
-// api_router.get("/api/users/:id", function (req, res) {
-//   // Find one User with the id in req.params.id and return them to the user with res.json
-//   db.User.findOne({
-//     where: {
-//       id: req.params.id
-//     },
-//     include: [db.User]
-//   }).then(function (dbUser) {
-//     res.json(dbUser);
-//   });
-// });
-
-
-
 //Creating api routes for the recipe post
 
 api_router.get("/api/newRecipe", (req, res) => {
@@ -73,9 +59,8 @@ api_router.post("/api/newRecipe", (req, res) => {
   }).then(results => {
     res.json({ id: results.id });
     res.status(200).end();
-  })
-})
-
+  });
+});
 
 
 
