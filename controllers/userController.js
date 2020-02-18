@@ -5,41 +5,57 @@ const path = require("path");
 
 // module.exports = function (app) {
 // Find all Users and return them to the user with res.json
-api_router.get("/api/users", function (req, res) {
-  db.User.findAll().then(function (dbUser) {
-    res.json(dbUser);
+
+api_router.get("/api/newUser", function (req, res) {
+  db.User.findAll({}).then(function (results) {
+    console.log(results);
+    res.render("sign-in", { user: results });
   });
 });
-
-api_router.get("/api/users/:id", function (req, res) {
-  // Find one User with the id in req.params.id and return them to the user with res.json
-  db.User.findOne({
-    where: {
-      id: req.params.id
-    },
-    include: [db.User]
-  }).then(function (dbUser) {
-    res.json(dbUser);
-  });
-});
-
-api_router.post("/api/users", function (req, res) {
+api_router.post("/api/newUser", function (req, res) {
   // Create an User with the data available to us in req.body
-  console.log(req.body);
-  db.User.create(req.body).then(function (dbUser) {
-    res.json(dbUser);
+  db.User.create({
+    user_name: req.body.user_name
+  }).
+    then(function (dbUser) {
+      res.json({ id: dbUser.id });
+      res.status(200).end();
+    });
+});
+
+
+api_router.get("/api/newUser", function (req, res) {
+  db.User.findAll({}).then(function (data) {
+    res.json(data);
   });
 });
 
-api_router.delete("/api/users/:id", function (req, res) {
+api_router.delete("/api/newUser/:id", function (req, res) {
   // Delete the User with the id available to us in req.params.id
   db.User.destroy({
     where: {
       id: req.params.id
     }
-  }).then(function (dbUser) {
-    res.json(dbUser);
+  }).then(function () {
+    res.end();
   });
 });
+
+
+// api_router.get("/api/users/:id", function (req, res) {
+//   // Find one User with the id in req.params.id and return them to the user with res.json
+//   db.User.findOne({
+//     where: {
+//       id: req.params.id
+//     },
+//     include: [db.User]
+//   }).then(function (dbUser) {
+//     res.json(dbUser);
+//   });
+// });
+
+
+
+
 
 module.exports = api_router;

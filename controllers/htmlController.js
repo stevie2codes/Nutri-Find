@@ -17,7 +17,6 @@ html_router.get("/", function (req, res) {
 
 // recipes route loads recipes handlebars
 html_router.get("/recipes", function (req, res) {
-  //res.sendFile(path.join(__dirname, ""));
 });
 
 // users route loads
