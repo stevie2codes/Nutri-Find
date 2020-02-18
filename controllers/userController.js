@@ -56,6 +56,28 @@ api_router.delete("/api/newUser/:id", function (req, res) {
 
 
 
+//Creating api routes for the recipe post
+
+api_router.get("/api/newRecipe", (req, res) => {
+  db.Post.findAll({}).then(results => {
+    console.log(results);
+    res.render("displayRecipe", { recipe: results })
+  });
+});
+
+api_router.post("/api/newRecipe", (req, res) => {
+  db.Post.create({
+    recipeName: req.body.recipeName,
+    ingredients: req.body.ingredients,
+    directions: req.body.directions
+  }).then(results => {
+    res.json({ id: results.id });
+    res.status(200).end();
+  })
+})
+
+
+
 
 
 module.exports = api_router;
