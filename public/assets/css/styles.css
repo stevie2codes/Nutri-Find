@@ -98,7 +98,6 @@ th {
   border-radius: 10px;
   text-align: center;
   font-family: "Bebas Neue", cursive;
-  height: 80vh;
   contain: content;
   overflow-x: auto;
 }
@@ -119,4 +118,21 @@ th {
   font-family: "Bebas Neue", cursive;
   height: 200px;
   width: 350px;
+}
+
+.recipeContainer {
+  margin: 5px auto;
+  width: 350px;
+  height: auto;
+  box-shadow: -3px -3px 10px rgba(158, 153, 153, 0.74),
+    3px 3px 10px rgba(100, 99, 99, 0.685);
+  background-color: rgb(245, 101, 101);
+  opacity: 0.9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.recipeText {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.4rem;
 }
