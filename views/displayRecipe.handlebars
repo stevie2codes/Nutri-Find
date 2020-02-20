@@ -1,6 +1,21 @@
 <h1>Created Recipes</h1>
+<div class="buttons">
+    <button id="show" class="bg-green-300 rounded-md p-2">Show List</button>
+    <button id="hide" class="bg-red-600 rounded-md p-2">Hide List</button>
+</div>
 {{#each recipe}}
-<ul class="recipeContainer flex justify-center animated fadeIn">
+<ul class="recipePreview flex justify-center bg-red-500 p-3">
+    <li class="preivewLi"></li>
+    <p>{{this.dataValues.recipeName}}</p>
+    </li>
+</ul>
+{{/each}}
+
+
+
+
+{{#each recipe}}
+<ul class="recipeContainer bg-red-500 flex justify-center animated fadeIn">
 
     <li class="recipeLi">
         <p class="font-extrabold"> <span class="recipeText">Recipe Name:</span> {{this.dataValues.recipeName}}</p> <br>
