@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  margin-top: 100px;
+  margin-top: 120px;
   font-size: 4rem;
   text-align: center;
   font-family: "Righteous", cursive;
@@ -72,8 +72,12 @@ h1 {
   position: absolute;
 }
 
+#recipe-icon {
+  border: 1px solid rgb(31, 28, 28);
+}
+
 a:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: ease-in-out, 0.5s;
 }
 
@@ -83,12 +87,9 @@ th {
 }
 
 .navText {
-  font-family: "Righteous", cursive;
+  font-family: "Bebas Neue", cursive;
   letter-spacing: 2px;
   font-size: 1.2rem;
-}
-.navBar {
-  opacity: 0.9;
 }
 
 .container {
@@ -122,12 +123,20 @@ th {
   height: 200px;
   width: 350px;
 }
-#recipe-icon {
-  border: 1px solid rgb(43, 42, 42);
-}
+
 .recipeContainer {
   margin: 5px auto;
   width: 350px;
+  height: auto;
+  box-shadow: -3px -3px 10px rgba(158, 153, 153, 0.74),
+    3px 3px 10px rgba(100, 99, 99, 0.685);
+  opacity: 0.9;
+  border-radius: 10px;
+  text-align: center;
+}
+.recipePreview {
+  margin: 5px auto;
+  width: 200px;
   height: auto;
   box-shadow: -3px -3px 10px rgba(158, 153, 153, 0.74),
     3px 3px 10px rgba(100, 99, 99, 0.685);
@@ -137,7 +146,19 @@ th {
   text-align: center;
 }
 
+.recipePreview,
 .recipeText {
   font-family: "Bebas Neue", cursive;
   font-size: 1.4rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+#show,
+#hide {
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  box-shadow: 2px 3px 5px rgba(39, 39, 39, 0.637);
+  margin: 10px auto;
 }
