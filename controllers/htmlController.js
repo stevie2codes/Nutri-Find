@@ -26,7 +26,12 @@ html_router.get("/users", function (req, res) {
 });
 
 html_router.get("/create", function (req, res) {
-  res.render("create")
+  console.log("hi");
+  db.User.findAll({}).then(function (results) {
+    console.log(results);
+    res.render("create", { user: results });
+  });
+
 
 });
 
