@@ -12,8 +12,8 @@ $(document).ready(function () {
         let newRecipe = {
             recipeName: recipeName.val().trim(),
             ingredients: ingredientValue.val().trim(),
-            directions: directionsValue.val().trim()
-            // user: selectUser.val().trim()
+            directions: directionsValue.val().trim(),
+            UserId: selectUser.val().trim()
         };
         console.log(newRecipe)
         $.ajax("/api/newRecipe", {
