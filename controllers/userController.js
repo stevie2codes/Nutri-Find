@@ -74,17 +74,17 @@ api_router.get("/api/newRecipe/:id", (req, res) => {
     },
     include: [db.User]
   }).then(dbPost => {
-    res.json(dbPost)
+    res.render(dbPost)
   });
 });
 
 api_router.post("/api/newRecipe", (req, res) => {
+  console.log(req.body);
   db.Post.create({
     recipeName: req.body.recipeName,
     ingredients: req.body.ingredients,
     directions: req.body.directions,
-    UserId: req.body.UserId,
-    User: req.body.User
+    UserId: req.body.UserId
   }).then(results => {
     res.json({ results });
     res.status(200).end();
