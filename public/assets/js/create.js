@@ -22,7 +22,7 @@ $(document).ready(function () {
         }).then(data => {
 
             console.log(data);
-            window.location.href = "/api/newRecipe";
+            window.location.href = "/recipes";
 
         });
     });
