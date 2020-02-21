@@ -63,20 +63,21 @@ api_router.get("/api/newRecipe", (req, res) => {
     include: [db.User]
   }).then(results => {
     console.log(results);
-    res.render("displayRecipe", { recipe: results })
+    res.json(results)
   });
 });
 
-api_router.get("/api/newRecipe/:id", (req, res) => {
-  db.Post.findOne({
-    where: {
-      id: req.params.id
-    },
-    include: [db.User]
-  }).then(dbPost => {
-    res.render(dbPost)
-  });
-});
+// api_router.get("/api/newRecipe/:id", (req, res) => {
+//   db.Post.findOne({
+//     where: {
+//       id: req.params.id
+//     },
+//     include: [db.User]
+//   }).then(dbPost => {
+//     console.log("This is coming from new recipe post: " + dbPost);
+//     res.render("displayRecipe", dbPost)
+//   });
+// });
 
 api_router.post("/api/newRecipe", (req, res) => {
   console.log(req.body);
