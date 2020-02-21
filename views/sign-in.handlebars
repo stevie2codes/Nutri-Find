@@ -12,10 +12,10 @@
   {{#each user}}
   <li class="userLi flex content-center align-center justify-center m-2 animated flipInY">
     <p class="mt-2">User Name: {{this.dataValues.user_name}}</p>
-    <button type="submit" id="destroy"
-      class="bg-red-500 hover:bg-red-700 text-white font-bold  rounded p-2 absolute bottom-0 left-0"
+    <button type="submit" id="destroy" class=" hover:text-gray-400  rounded-md m-5  p-1 absolute bottom-0 left-0"
       data-id="{{this.dataValues.id}}">Delete User</button>
-    <button class="go absolute bottom-0 right-0 p-2 hover:bg-red-700"><a href="/create">Create a recipe</a></button>
+    <button class="go absolute bottom-0 right-0 p-1 m-5 hover:text-gray-400 h  rounded-md"><a href="/create">Create a
+        recipe</a></button>
   </li>
 </ul>
 {{/each}}
