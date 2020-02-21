@@ -97,7 +97,14 @@ th {
   justify-content: center;
   box-shadow: -3px -3px 10px rgba(158, 153, 153, 0.74),
     3px 3px 10px rgba(100, 99, 99, 0.685);
-  background-color: rgb(245, 101, 101);
+  background-image: radial-gradient(
+    circle,
+    #f57374,
+    #f06768,
+    #ea5b5c,
+    #e44f4f,
+    #de4243
+  );
   opacity: 0.9;
   border-radius: 10px;
   text-align: center;
@@ -114,7 +121,14 @@ th {
   justify-content: center;
   box-shadow: -3px -3px 10px rgba(158, 153, 153, 0.74),
     3px 3px 10px rgba(100, 99, 99, 0.685);
-  background-color: rgb(245, 101, 101);
+  background-image: radial-gradient(
+    circle,
+    #f57374,
+    #f06768,
+    #ea5b5c,
+    #e44f4f,
+    #de4243
+  );
   opacity: 0.9;
   border-radius: 10px;
   font-size: 1.4rem;
@@ -128,6 +142,14 @@ th {
   margin: 5px auto;
   width: 350px;
   height: auto;
+  background-image: radial-gradient(
+    circle,
+    #f57374,
+    #f06768,
+    #ea5b5c,
+    #e44f4f,
+    #de4243
+  );
   box-shadow: -3px -3px 10px rgba(158, 153, 153, 0.74),
     3px 3px 10px rgba(100, 99, 99, 0.685);
   opacity: 0.9;
@@ -140,7 +162,14 @@ th {
   height: auto;
   box-shadow: -3px -3px 10px rgba(158, 153, 153, 0.74),
     3px 3px 10px rgba(100, 99, 99, 0.685);
-  background-color: rgb(245, 101, 101);
+  background-image: radial-gradient(
+    circle,
+    #f57374,
+    #f06768,
+    #ea5b5c,
+    #e44f4f,
+    #de4243
+  );
   opacity: 0.9;
   border-radius: 10px;
   text-align: center;
@@ -158,8 +187,20 @@ th {
 }
 #show,
 #hide {
-  border: 1px solid rgba(0, 0, 0, 0.404);
+  border: 0.5px solid rgba(56, 55, 55, 0.404);
   box-shadow: 2px 3px 5px rgba(39, 39, 39, 0.637);
   margin: 10px auto;
   font-family: "Bebas Neue", cursive;
+}
+
+#destroy,
+.go {
+  box-shadow: -3px -3px 8px 0 rgb(235, 119, 119), 3px 3px 8px 0 rgb(170, 63, 63);
+}
+
+#show {
+  background-color: #00b576;
+}
+#hide {
+  background-color: #998aff;
 }
