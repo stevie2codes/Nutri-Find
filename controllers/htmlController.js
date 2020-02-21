@@ -17,7 +17,11 @@ html_router.get("/", function (req, res) {
 
 // recipes route loads recipes handlebars
 html_router.get("/recipes", function (req, res) {
-  res.render("displayRecipe");
+  db.Post.findAll({ include: [db.User] }).then(data => {
+    console.log("this is html routes: " + data);
+    res.render("displayRecipe", { recipe: data });
+
+  });
 });
 
 // users route loads
@@ -26,7 +30,6 @@ html_router.get("/users", function (req, res) {
 });
 
 html_router.get("/create", function (req, res) {
-  console.log("hi");
   db.User.findAll({}).then(function (results) {
     console.log(results);
     res.render("create", { user: results });
