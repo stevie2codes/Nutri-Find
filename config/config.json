@@ -6,6 +6,7 @@
     "host": "y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
+    
   },
   "test": {
     "username": "root",
