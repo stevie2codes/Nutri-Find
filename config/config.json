@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "MyNewPass",
-    "database": "nutri_find_db",
-    "host": "127.0.0.1",
+    "username": "tm5rm8ix5cg04cf6",
+    "password": "kcrjci52k5mcia1c",
+    "database": "gq1gn3x7qikp9slw",
+    "host": "k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
@@ -16,10 +16,10 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "tm5rm8ix5cg04cf6",
+    "password": "kcrjci52k5mcia1c",
+    "database": "gq1gn3x7qikp9slw",
+    "host": "k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   }
