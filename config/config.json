@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "christianlance",
-    "password": "MyNewPass",
-    "database": "nutri_find_db",
-    "host": "127.0.0.1",
+    "username": "okaqla5ohv6ccipg",
+    "password": "p6tnk3qn6255kkzk",
+    "database": "nigu3labft0yqdk2",
+    "host": "y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
